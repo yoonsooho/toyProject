@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <ul class="list">
+      <li><strong>용돈</strong>-<span>3000</span></li>
+    </ul>
+    <script>
+      // const 요청url = " https://eulsoo.github.io/list.json"
+      // const 요청객체 = new XMLHttpRequest()
+      // 요청객체.open("GET", 요청url)
+      // 요청객체.responseType = "json"
+      // 요청객체.send()
+      // 요청객체.onload = () => {
+      //   const obj = 요청객체.response
+      //   할일(obj)
+      // } //옛날 방식의 json파일 사용하기
+
+      fetch(" https://eulsoo.github.io/list.json")
+        .then(function (res) {
+          return res.json()
+        })
+        .then(function (obj) {
+          console.log(obj)
+          할일(obj)
+        })
+
+      function 할일(obj) {
+        console.log(obj)
+        const ulElem = document.querySelector(".list")
+
+        for (let i = 0; i < obj.length; i++) {
+          //li 만들기
+          const li = document.createElement("li")
+          li.className = "yy"
+          const stg = document.createElement("strong")
+          const span = document.createElement("span")
+          //item 값 가져와서 li에 넣기
+          li.append(stg)
+          li.append(span)
+          stg.textContent = obj[i].item
+          span.textContent = -obj[i].price
+          //ul에 li 넣기
+          ulElem.append(li)
+        }
+      }
+    </script>
+  </body>
+</html>

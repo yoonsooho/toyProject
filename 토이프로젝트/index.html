@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>토이프로젝트</title>
+    <link rel="stylesheet" href="./CSS/main.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nanum+Brush+Script&family=Nanum+Gothic:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/reset-css@5.0.1/reset.min.css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  </head>
+  <body>
+    <section class="slide">
+      <header>
+        <img class="iphone" src="./img/iphone.png" alt="iphone" />
+        <div class="title-wrap__avatar">
+          <img class="avatar_img" src="./img/아바타.png" alt="아바타" />
+          <h2 class="title-wrap_title">생활비</h2>
+          <div class="title-wrap__icon-wrap">
+            <img class="icon-1" src="./img/간편결제아이콘.png" alt="icon1" />
+            <img class="icon-1" src="./img/검색아이콘.png" alt="icon1" />
+          </div>
+        </div>
+      </header>
+      <article id="account-status">
+        <div class="bank-account">
+          <p class="account">355-673877-78773</p>
+          <p class="transfer">이체</p>
+        </div>
+        <p class="bank-amount">1,240,000<span>원</span></ㅔ>
+        <div class="graph-wrap">
+          <div class="graph"></div>
+          <div class="graph-btn">
+            <img src="./img/btn-graph.svg" alt="graph-btn" />
+          </div>
+        </div>
+        <p class="balance-amount">5일 동안 210,000원 남음</p>
+      </article>
+      <h3 class="ad-text">
+        지금 낮은 이자로 생활대출을 신청하세요! <a>GO</a>
+      </h3>
+      <div id="history-wrap-box">
+        <article id="history-wrap">
+          <div class="drag-btn">
+            <div></div>
+          </div>
+          <ul class="goal-wrap">
+            <div>
+              <li class="goal-btn">
+                <div class="color-box">
+                  <p class="text">여행가자!</p>
+                  <p class="money">842,200</p>
+                </div>
+              </li>
+              <li class="goal-btn">
+                <div class="color-box color-orange">
+                  <p class="text">냉장고사기</p>
+                  <p class="money">142,200</p>
+                </div>
+              </li>
+            </div>
+            
+          </ul>
+          <div class="day-money-wrap">
+            
+            </div>         
+        </article>
+      <nav id="nav">
+        <ul class="nav_icon-wrap">
+          <li class="nav_icon1">
+            <img src="./img/nav_btn-home.svg" alt="home">
+          </li>
+          <li class="nav_icon2">
+            <img src="./img/nav_btn-switch.svg" alt="switch">
+          </li>
+          <li class="nav_icon3">
+            <img src="./img/nav_btn-message.svg" alt="message">
+          </li>
+          <li class="nav_icon4">
+            <img src="./img/nav-btn-more.png" alt="more">
+          </li>
+        </ul>
+      </nav>
+    </section>
+    <div>
+      <canvas id="myChart"></canvas>
+    </div>
+    <script defer src="./js/index.js"></script>
+    <script defer src="./js/chart.js"></script>
+  </body>
+</html>
